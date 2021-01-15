@@ -222,14 +222,14 @@ a:visited {
 
 .noticias {
     clear: both;
-    padding: 59px 0;
 }
 
 .noticias img {
     width: 240px;
     height: 240px;
     float: left;
-    margin: 0 38px 0 150px;
+    display: block;
+    margin: 0 38px 59px 146px;
 }
 
 .noticias h3 {
@@ -245,15 +245,17 @@ a:visited {
     background-color: #F07E15;
     float: left;
     width: 100%;
+    margin-bottom: 18px;
 }
 
 
 .noticias p {
     font-size: 1.125em;
-    width: 701px;
+    width: 730px;
     float: left;
     font-weight: 100;
-    margin: 18px 218px 0 0;
+    margin-right: 218px;
+    height: 165px;
 
 }
 

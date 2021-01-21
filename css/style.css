@@ -28,6 +28,45 @@ a:visited {
     display: flex;
 }
 
+.container-noticias {
+    max-width: 979px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media (max-width: 500px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+
+    .imagem-noticias {
+        display: none;
+    }
+
+
+    .texto-noticias a h3 {
+        text-align: center;
+        float: none;
+        border-width: 100%;
+    }
+
+    .texto-noticias {
+        margin: 0 7%;
+    }
+
+    .ultimas-noticias h1 {
+        display: block;
+        border-bottom: none #000000 0 !important;
+
+    }
+}
+
 
 
 
@@ -73,13 +112,11 @@ a:visited {
         padding: 20px 0;
     }
 
-    .menu .container {
-        flex-direction: column;
-        margin: 0 auto;
-    }
+    .menu .container {}
 
     .menu-nav {
         font-size: 1em;
+        justify-items: center;
     }
 
     .menu-nav a {
@@ -87,6 +124,18 @@ a:visited {
         display: block;
         padding: 5px;
     }
+
+    .ultimas-noticias h1 {
+        font-size: 3em;
+        text-transform: uppercase;
+        color: #F07E15;
+        font-weight: 100;
+        text-align: center;
+        border-bottom: 2px solid;
+        margin: 0 10% !important;
+
+    }
+
 
 }
 
@@ -119,11 +168,10 @@ a:visited {
 
 @media (max-width: 500px) {
     .intro {
-        padding-top: 50px;
+        padding: 75px 0;
     }
 
     .intro p {
-        padding-bottom: 60px;
         font-size: 1em;
         width: 200px;
         margin: 0 auto;
@@ -215,6 +263,10 @@ a:visited {
         max-width: 300px;
         padding: 23px 0;
     }
+
+    .novidades h1 {
+        margin-bottom: 35px;
+    }
 }
 
 /* NOTICIAS */
@@ -228,30 +280,21 @@ a:visited {
 
 
 .ultimas-noticias h1 {
+    max-width: 979px;
+    margin: 0 auto;
     font-size: 3em;
-    text-transform: capitalize;
+    text-transform: uppercase;
     color: #F07E15;
     font-weight: 100;
     display: block;
-    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid;
+    border-width: 100%;
 
 }
 
-.ultimas-noticias h1:after {
-    content: '';
-    display: block;
-    height: 2px;
-    background: #F07E15;
-    margin-top: 23px;
-    width: 100%;
-}
 
-.container-noticias {
-    max-width: 979px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-}
+
 
 
 .noticias {

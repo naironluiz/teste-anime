@@ -2,7 +2,6 @@ body,
 h1,
 h2,
 h3,
-p,
 ul,
 a {
     padding: 0;
@@ -23,41 +22,40 @@ a:visited {
     box-sizing: border-box;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+
+
+
 
 /* HEADER */
 .menu {
     background: #000000;
     color: #F07E15;
-    padding: 20px;
     text-transform: uppercase;
-
+    padding: 45px 0;
 
 }
 
-.header-container {
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
-.header-container::after,
-.header-container::before {
-    content: '';
-    clear: both;
-    display: table;
+.menu .container {
+    justify-content: space-between;
+    align-items: center;
 }
 
 .menu h1 {
-    display: block;
-    float: left;
+
     font-size: 3em;
-    margin-left: 126px;
     font-weight: 100;
+    display: flex;
+
 }
 
+
 .menu-nav {
-    float: right;
     font-size: 1.5em;
-    margin-right: 126px;
 }
 
 .menu-nav li {
@@ -65,33 +63,53 @@ a:visited {
 }
 
 .menu-nav a {
-    display: block;
     padding: 10px;
+    display: flex;
+
 }
 
+@media (max-width: 500px) {
+    .menu {
+        padding: 20px 0;
+    }
 
+    .menu .container {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .menu-nav {
+        font-size: 1em;
+    }
+
+    .menu-nav a {
+        margin: 0 auto;
+        display: block;
+        padding: 5px;
+    }
+
+}
 
 /* INTRO */
 .intro {
     background: url("../img/berserk-novidades-outubro.jpg") center center no-repeat;
     background-size: cover;
+    padding: 125px 0;
+    max-width: 100%;
 }
 
 .intro h1 {
-    padding-top: 171px;
     text-align: center;
     color: #F07E15;
     text-transform: uppercase;
     font-size: 4em;
     font-weight: 100;
-
 }
 
 .intro p {
     text-align: center;
     font-size: 1.5em;
     margin-top: 23px;
-    padding-bottom: 124px;
     font-style: italic;
 }
 
@@ -99,25 +117,27 @@ a:visited {
     color: #F07E15;
 }
 
+@media (max-width: 500px) {
+    .intro {
+        padding-top: 50px;
+    }
+
+    .intro p {
+        padding-bottom: 60px;
+        font-size: 1em;
+        width: 200px;
+        margin: 0 auto;
+    }
+
+}
+
 /* NOVIDADES */
 
 .novidades {
-    padding-top: 69px;
+    padding: 69px 0;
 
 }
 
-.novidades-container {
-    max-width: 1440px;
-    margin: 0 auto;
-
-}
-
-.novidades-container::before,
-.novidades-container::after {
-    content: '';
-    display: table;
-    clear: both;
-}
 
 .novidades h1 {
     text-transform: uppercase;
@@ -128,19 +148,13 @@ a:visited {
 }
 
 .novidades-item img {
-    width: 243px;
-    height: 216px;
+    max-width: 100%;
+    display: block;
 
 }
 
-.novidades-extra {
-    margin: 0 230px;
-}
-
-.novidades-item {
-    float: left;
-    width: 243px;
-    margin-left: 50px;
+.novidades .container {
+    justify-content: space-around;
 }
 
 .novidades-item p {
@@ -149,23 +163,24 @@ a:visited {
     text-transform: uppercase;
     font-size: 1.5em;
     text-align: center;
-    position: relative;
     color: #F07E15;
-    top: -40px;
+    position: relative;
+    top: -62px;
+    margin-bottom: -62px;
 }
 
 .novidades-texto {
     text-align: center;
     color: #000000;
     font-size: 1.125em;
-    width: 517px;
-    margin: 69px auto;
+    max-width: 517px;
+    margin: 81px auto;
 }
 
-.novidades-container>a {
+.novidades>a {
     display: block;
-    width: 478px;
-    margin: 81px auto;
+    max-width: 478px;
+    margin: 0px auto;
     font-size: 3em;
     padding: 46px 0;
     text-transform: uppercase;
@@ -174,124 +189,127 @@ a:visited {
     border: 2px solid #F07E15;
 }
 
-.novidades-container>a:hover {
+.novidades>a:hover {
     background: rgba(233, 169, 8, .2);
+}
+
+@media (max-width: 500px) {
+    .novidades .container {
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 243px;
+
+    }
+
+    .novidades-item {
+        margin-top: 10px;
+    }
+
+    .novidades-texto {
+        padding: 0 50px;
+        margin: 50px 0;
+    }
+
+    .novidades>a {
+        max-width: 300px;
+        padding: 23px 0;
+    }
 }
 
 /* NOTICIAS */
 
+
 .ultimas-noticias {
     background-color: #000000;
     color: #fff;
-    padding: 46px 0 108px 0;
+    padding: 69px 0;
 }
 
-.noticias-container {
-    max-width: 1440px;
 
-}
-
-.noticias-container::before,
-.noticias-container::after {
-    content: '';
-    display: table;
-    clear: both;
-}
-
-.noticias-header {
-    padding: 20px;
-}
-
-.noticias-header h1 {
+.ultimas-noticias h1 {
     font-size: 3em;
     text-transform: capitalize;
     color: #F07E15;
     font-weight: 100;
-    margin-left: 126px;
+    display: block;
+    width: 100%;
 
 }
 
-.noticias-header h1:after {
+.ultimas-noticias h1:after {
     content: '';
     display: block;
     height: 2px;
     background: #F07E15;
     margin-top: 23px;
-    margin-right: 218px;
+    width: 100%;
 }
+
+.container-noticias {
+    max-width: 979px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
 
 .noticias {
-    clear: both;
+    margin-top: 59px;
+    display: flex;
+
 }
+
 
 .noticias img {
-    width: 240px;
-    height: 240px;
-    float: left;
     display: block;
-    margin: 0 38px 59px 146px;
 }
 
-.noticias h3 {
+.imagem-noticias {
+    margin-right: 39px;
+
+}
+
+.texto-noticias h3 {
     font-size: 1.5em;
     color: #F07E15;
+    padding: 5px 0;
+    border-bottom: 2px solid #F07E15;
     float: left;
 
 }
 
-.noticias h3::after {
-    content: '';
-    height: 3px;
-    background-color: #F07E15;
-    float: left;
-    width: 100%;
-    margin-bottom: 18px;
+.texto-noticias a {
+    display: contents;
 }
-
 
 .noticias p {
     font-size: 1.125em;
-    width: 730px;
-    float: left;
     font-weight: 100;
-    margin-right: 218px;
-    height: 165px;
+    max-width: 701px;
+    float: left;
+
 
 }
 
 /* FOOTER */
 
 .footer {
-    padding: 28px 0;
+    padding: 10px 0;
     color: #F07E15;
-    font-size: 1.5em;
+    font-size: 1em;
     line-height: 1.4em;
 
 
 }
 
-.footer-container {
-    max-width: 1440px;
-
+.footer .container {
+    justify-content: space-between;
+    align-items: center;
 }
 
-.footer-container::before,
-.footer-container::after {
-    content: '';
-    display: table;
-    clear: both;
-}
 
-.footer-texto {
-    margin-left: 126px;
-}
 
 .footer-texto span {
     font-style: italic;
-    float: left;
-}
-
-.footer-texto-2 {
-    float: right;
-    margin: auto 126px auto 0;
 }
